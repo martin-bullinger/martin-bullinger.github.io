@@ -1,0 +1,640 @@
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Publications</title>
+    <style>
+        /* Base styling for the publication entry */
+        .publication-entry {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Author styling */
+        .publication-entry .authors {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        /* Title styling */
+        .publication-entry .title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 8px;
+        }
+
+        /* Venue styling */
+        .publication-entry .venue {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+ 
+        /* link styling, edit if wanted differently */
+        .publication-entry a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        .publication-entry a:hover {
+            text-decoration: underline;
+        }
+
+		/* Base button styling */
+		.filter-buttons {
+		    margin-bottom: 1px;
+		}
+
+		.filter-btn {
+		    font-size: 16px;
+		    padding: 3px 10px;
+		    margin: 5px;
+		    border: none;
+		    border-radius: 5px;
+		    cursor: pointer;
+		    transition: background-color 0.3s, color 0.3s;
+		}
+
+		/* Button active state */
+		.filter-btn.active {
+		    font-weight: bold;
+		    color: white;
+		    /* background-color: #0056b3; Change to other color when active */
+		    opacity: 1;
+		}
+
+		/* Different colors for each filter button */
+		.all-btn {
+		    background-color: #0056b3;
+		    color: white;
+		    opacity: 0.5;
+		}
+
+		.conference-btn {
+		    background-color: #007bff; /* Blue */
+		    color: white;
+		    opacity: 0.5;
+		}
+
+		.journal-btn {
+		    background-color: #28a745; /* Green */
+		    color: white;
+		    opacity: 0.5;
+		}
+
+		.preprint-btn {
+		    background-color: #ffc107; /* Yellow */
+		    color: white;
+		}
+
+		.filter-btn:hover {
+		    opacity: 0.8;
+		}
+		/* Hide content by default */
+		.all-content {
+		    display: none;
+		}
+
+		/* Show content when 'All' is selected */
+		.filter-buttons .active[data-filter="all"] + .all-content {
+		    display: block;
+		}
+    </style>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+<body>
+    <div align=center text-align:center> 
+        <br><br>
+        <font size=7 color=#0056b3>Martin Bullinger &mdash; Publications </font>
+        <br><br>
+        <p style="font-size: 22px"><a href="https://www.cs.ox.ac.uk/people/martin.bullinger/" class="head-link">Postdoctoral Researcher</a>, Department of Computer Science, University of Oxford</p>
+        <br>
+        <p style="font-size: 16px">martin.bullinger['at']cs.ox.ac.uk &middot; <a href="https://scholar.google.com/citations?user=yayHghEAAAAJ&hl=de" class="head-link">Google Scholar</a> &middot; <a href="https://dblp.org/pid/266/5624.html" class="head-link">DBLP</a></p>
+        <br>
+    </div>
+    <div id="navcontainer">
+        <ul id="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="publications.html">Publications</a></li>
+        </ul>
+    </div>
+	<br>
+
+    <!-- Filter Buttons -->
+	<div align=center class="filter-buttons">
+	    <button onclick="filterByTag('all')" class="filter-btn all-btn">All</button>
+	    <button onclick="filterByTag('journal')" class="filter-btn journal-btn">Journal</button>
+	    <button onclick="filterByTag('conference')" class="filter-btn conference-btn">Conference</button>
+	    <!--<button onclick="filterByTag('preprint')" class="filter-btn preprint-btn">Preprints</button> \\unnecessary button-->
+	</div>
+	<br>
+		
+	<div class="all-content">
+	
+    	<!-- Preprints -->
+    	<p style="font-size: 20px; text-align: left; font-weight: bold;">Preprints</p>
+    	<hr>
+    	<div class="publication-entry preprint">
+    	    <div class="authors">Ilan Adler, Martin Bullinger, and Vijay V. Vazirani</div>
+    	    <div class="title">A Generalization of von Neumann's Reduction from the Assignment Problem to Zero-Sum Games</div>
+    	    <p style="font-size: 16px">[<a href="https://arxiv.org/abs/2410.10767">arXiv</a>]</p>
+    	</div>
+		<div class="publication-entry preprint">
+		    <div class="authors">Martin Bullinger and Matan Gilboa</div>
+		    <div class="title">Settling the Complexity of Popularity in Additively Separable and Fractional Hedonic Games</div>
+		    <p style="font-size: 16px">
+		        <p style="font-size: 16px">[<a href="https://arxiv.org/abs/2411.05713">arXiv</a>]</p>
+		</div>
+		
+    	<!-- Book Chapter encoded as preprint to be always shown -->
+    	<p style="font-size: 20px; text-align: left; font-weight: bold;">Book Chapter</p>
+    	<hr>
+		<div class="publication-entry preprint">
+		    <div class="authors">Martin Bullinger, Edith Elkind, and Jörg Rothe</div>
+		    <div class="title">Cooperative Game Theory</div>
+		    <div class="venue">
+		        In Jörg Rothe (Ed.), <em>Economics and Computation: An Introduction to Algorithmic Game Theory, Computational Social Choice, and Fair Division</em>, Chapter 3, pages 139&ndash;229, Springer-Verlag, 2024.
+		    </div>
+		    <p style="font-size: 16px">
+		            [<a href="https://link.springer.com/book/10.1007/978-3-031-60099-9">link to book</a>]
+		    </p>
+		</div>
+	</div>
+
+	<!-- Publications 2025 -->
+	<p style="font-size: 20px; text-align: left; font-weight: bold;">2025</p>
+	<hr>
+	<div class="publication-entry journal">
+	    <div class="authors">Niclas Boehmer, Martin Bullinger, and Anna M. Kerkmann</div>
+	    <div class="title">Causes of Stability in Dynamic Coalition Formation</div>
+	    <div class="venue">
+	        In <em>ACM Transactions on Economics and Computation</em>, Forthcoming.
+	    </div>
+	    <p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('journal')" class="filter-btn journal-btn" style="opacity: 1;">Journal</button>
+	            [<a href="https://arxiv.org/abs/2211.17169">arXiv</a>] 
+	            [<a href="https://dl.acm.org/doi/pdf/10.1145/3711671">link</a>]
+	        </span>
+	    </p>
+	</div>
+	
+	<div class="publication-entry conference">
+	    <div class="authors">Martin Bullinger, Vaggos Chatziafratis, and Parnian Shahkar</div>
+	    <div class="title">Welfare Approximation in Additively Separable Hedonic Games</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>, Forthcoming.
+	    </div>
+	    <div class="filter-buttons">
+	        <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+	    </div>
+	</div>
+	<div class="publication-entry conference">
+	    <div class="authors">Martin Bullinger, Edith Elkind, and Mohamad Latifan</div>
+	    <div class="title">Towards Fair and Efficient Public Transportation: A Bus Stop Model</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>, Forthcoming.
+	    </div>
+		<p style="font-size: 16px">
+		    <span class="button-link-container">
+		        <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+		        [<a href="https://arxiv.org/abs/2411.08784">arXiv</a>] 
+		    </span>
+		</p>
+	</div>
+	<div class="publication-entry conference">
+	    <div class="authors">Chris Dong, Martin Bullinger, Tomasz Wąs, Larry Birnbaum, and Edith Elkind</div>
+	    <div class="title">Selecting Interlacing Committees</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>, Forthcoming.
+	    </div>
+	    <div class="filter-buttons">
+	        <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+	    </div>
+	</div>
+
+	<!-- Publications 2024 -->
+	<p style="font-size: 20px; text-align: left; font-weight: bold;">2024</p>
+	<hr>
+	<div class="publication-entry journal">
+	    <div class="authors">Felix Brandt, Martin Bullinger, and Leo Tappe</div>
+	    <div class="title">Stability Based on Single-Agent Deviations in Additively Separable Hedonic Games</div>
+	    <div class="venue">
+	        <em>Artificial Intelligence</em>, 334:104160.
+	    </div>
+		<p style="font-size: 16px">
+		    <span class="button-link-container">
+		        <button onclick="filterByTag('journal')" class="filter-btn journal-btn" style="opacity: 1;">Journal</button>
+		        [<a href="https://www.sciencedirect.com/science/article/pii/S0004370224000961">link</a>]
+		    </span>
+		</p>
+	</div>
+	
+	<div class="publication-entry journal">
+	    <div class="authors">Martin Bullinger, Pascal Lenzner, and Anna Melnichenko</div>
+	    <div class="title">Network Creation with Homophilic Agents</div>
+	    <div class="venue">
+	        <em>Social Choice and Welfare</em>.
+	    </div>
+		<p style="font-size: 16px">
+		    <span class="button-link-container">
+		        <button onclick="filterByTag('journal')" class="filter-btn journal-btn" style="opacity: 1;">Journal</button>
+		        [<a href="https://arxiv.org/abs/2204.13757">arXiv</a>]
+		        [<a href="https://link.springer.com/article/10.1007/s00355-024-01562-x">link</a>]
+		    </span>
+		</p>
+	</div>
+	
+	<div class="publication-entry journal">
+	    <div class="authors">Martin Bullinger and Warut Suksompong</div>
+	    <div class="title">Topological Distance Games</div>
+	    <div class="venue">
+	        <em>Theoretical Computer Science</em>, 981:114238.
+	    </div>
+		<p style="font-size: 16px">
+		    <span class="button-link-container">
+		        <button onclick="filterByTag('journal')" class="filter-btn journal-btn" style="opacity: 1;">Journal</button>
+		        [<a href="https://arxiv.org/abs/2211.11000">arXiv</a>] 
+		        [<a href="https://www.sciencedirect.com/science/article/pii/S0304397523005510">link</a>]
+		    </span>
+		</p>
+	</div>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Martin Bullinger and Sonja Kraiczy</div>
+	    <div class="title">Stability in Random Hedonic Games</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 25th ACM Conference on Economics and Computation (ACM-EC)</em>.
+	    </div>
+		<p style="font-size: 16px">
+		    <span class="button-link-container">
+		        <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+		        [<a href="https://arxiv.org/abs/2406.01373">arXiv</a>] 
+		        [<a href="https://dl.acm.org/doi/10.1145/3670865.3673476">link</a>]
+		    </span>
+		</p>
+	</div>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Martin Bullinger, Rohith R. Gangam, and Parnian Shahkar</div>
+	    <div class="title">Robust Popular Matchings</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 23rd International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>, pages 225&ndash;233.
+	    </div>
+		<p style="font-size: 16px">
+		    <span class="button-link-container">
+		        <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+		        [<a href="https://arxiv.org/abs/2401.12653">arXiv</a>] 
+		        [<a href="https://www.ifaamas.org/Proceedings/aamas2024/pdfs/p225.pdf">link</a>]
+		    </span>
+		</p>
+	</div>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Martin Bullinger and René Romen</div>
+	    <div class="title">Stability in Online Coalition Formation</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 38th AAAI Conference on Artificial Intelligence (AAAI)</em>, pages 9537&ndash;9545.
+	    </div>
+		<p style="font-size: 16px">
+		    <span class="button-link-container">
+		        <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+		        [<a href="https://arxiv.org/abs/2406.01373">arXiv</a>] 
+		        [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/28809/29546">link</a>]
+		    </span>
+		</p>
+	</div>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Martin Bullinger, Chris Dong, Patrick Lederer, and Clara Mehler</div>
+	    <div class="title">Participation Incentives in Approval-Based Committee Elections</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 38th AAAI Conference on Artificial Intelligence (AAAI)</em>, pages 9546&ndash;9554.
+	    </div>
+		<p style="font-size: 16px">
+		    <span class="button-link-container">
+		        <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+		        [<a href="https://arxiv.org/abs/2312.08798">arXiv</a>] 
+		        [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/28810/29548">link</a>]
+		    </span>
+		</p>
+	</div>
+	
+
+    <!-- Publications 2023 -->
+    <p style="font-size: 20px; text-align: left; font-weight: bold;">2023</p>
+    <hr>
+
+	<div class="publication-entry journal">
+	    <div class="authors">Felix Brandt, Martin Bullinger, and Anaëlle Wilczynski</div>
+	    <div class="title">Reaching Individually Stable Coalition Structures</div>
+	    <div class="venue">
+	        <em>ACM Transactions on Economics and Computation</em>, 11 (1&ndash;2), pages 4:1&ndash;65.
+	    </div>
+		<p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('journal')" class="filter-btn journal-btn" style="opacity: 1;">Journal</button>
+		        [<a href="https://arxiv.org/abs/2211.09571">arXiv</a>] 
+	            [<a href="https://dl.acm.org/doi/10.1145/3588753">link</a>]
+	        </span>
+	    </p>
+	</div>
+		
+	<div class="publication-entry conference">
+	    <div class="authors">Johannes Bäumler, Martin Bullinger, Stefan Kober, and Donghao Zhu</div>
+	    <div class="title">Superiority of Instantaneous Decisions in Thin Dynamic Matching Markets</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 24th ACM Conference on Economics and Computation (ACM-EC)</em>, page 390.
+	    </div>
+		<p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+		        [<a href="https://arxiv.org/abs/2206.10287">arXiv</a>] 
+	            [<a href="https://dl.acm.org/doi/10.1145/3580507.3597660">link</a>]
+	        </span>
+	    </p>
+	</div>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Martin Bullinger and René Romen</div>
+	    <div class="title">Online Coalition Formation under Random Arrival or Coalition Dissolution</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 31st European Symposium on Algorithms (ESA)</em>, pages 27:1&ndash;27:18.
+	    </div>
+		<p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+		        [<a href="https://arxiv.org/abs/2306.16965">arXiv</a>] 
+	            [<a href="https://drops.dagstuhl.de/opus/volltexte/2023/18680/pdf/LIPIcs-ESA-2023-27.pdf">link</a>]
+	        </span>
+	    </p>
+	</div>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Niclas Boehmer, Martin Bullinger, and Anna M. Kerkmann</div>
+	    <div class="title">Causes of Stability in Dynamic Coalition Formation</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 37th AAAI Conference on Artificial Intelligence (AAAI)</em>, pages 5499&ndash;5506.
+	    </div>
+		<p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+		        [<a href="https://arxiv.org/abs/2211.17169">arXiv</a>] 
+	            [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/25683/25455">link</a>]
+	        </span>
+	    </p>
+	</div>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Martin Bullinger and Warut Suksompong</div>
+	    <div class="title">Topological Distance Games</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 37th AAAI Conference on Artificial Intelligence (AAAI)</em>, pages 5549&ndash;5556, 2023.
+	    </div>
+		<p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+		        [<a href="https://arxiv.org/abs/2211.11000">arXiv</a>] 
+	            [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/25689/25461">link</a>]
+	        </span>
+	    </p>
+	</div>
+	
+
+    <!-- Publications 2022 -->
+	<p style="font-size: 20px; text-align: left; font-weight: bold;">2022</p>
+	<hr>
+
+	<div class="publication-entry journal">
+	    <div class="authors">Felix Brandt, Martin Bullinger, and Patrick Lederer</div>
+	    <div class="title">On the Indecisiveness of Kelly-Strategyproof Social Choice Functions</div>
+	    <div class="venue">
+	        <em>Journal of Artificial Intelligence Research</em>, 73, pages 1093&ndash;1130.
+	    </div>
+	    <p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('journal')" class="filter-btn journal-btn" style="opacity: 1;">Journal</button>
+	            [<a href="https://arxiv.org/abs/2102.00499">arXiv</a>] 
+	            [<a href="https://jair.org/index.php/jair/article/view/13449">link</a>]
+	        </span>
+	    </p>
+	</div>
+
+	<div class="publication-entry journal">
+	    <div class="authors">Felix Brandt and Martin Bullinger</div>
+	    <div class="title">Finding and Recognizing Popular Coalition Structures</div>
+	    <div class="venue">
+	        <em>Journal of Artificial Intelligence Research</em>, 74, pages 569&ndash;626.
+	    </div>
+	    <p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('journal')" class="filter-btn journal-btn" style="opacity: 1;">Journal</button>
+	            [<a href="https://jair.org/index.php/jair/article/view/13470">link</a>]
+	        </span>
+	    </p>
+	</div>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Felix Brandt, Martin Bullinger, and Leo Tappe</div>
+	    <div class="title">Single-Agent Dynamics in Additively Separable Hedonic Games</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 36th AAAI Conference on Artificial Intelligence (AAAI)</em>, pages 4867&ndash;4874.
+	    </div>
+	    <p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+	            [<a href="https://doi.org/10.1609/aaai.v36i5.20415">link</a>]
+	        </span>
+	    </p>
+	</div>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Martin Bullinger, Pascal Lenzner, and Anna Melnichenko</div>
+	    <div class="title">Network Creation with Homophilic Agents</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 31th International Joint Conference on Artificial Intelligence (IJCAI)</em>, pages 151&ndash;157.
+	    </div>
+	    <p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+		        [<a href="https://arxiv.org/abs/2204.13757">arXiv</a>] 
+	            [<a href="https://www.ijcai.org/proceedings/2022/0022.pdf">link</a>]
+	        </span>
+	    </p>
+	</div>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Martin Bullinger</div>
+	    <div class="title">Boundaries to Single-Agent Stability in Additively Separable Hedonic Games</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 47th International Symposium on Mathematical Foundations of Computer Science (MFCS)</em>, pages 26:1&ndash;26:15.
+	    </div>
+	    <p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+	            [<a href="https://drops.dagstuhl.de/opus/volltexte/2022/16824/">link</a>]
+	        </span>
+	    </p>
+	</div>
+    
+    <!-- Publications 2021 -->
+	<p style="font-size: 20px; text-align: left; font-weight: bold;">2021</p>
+	<hr>
+
+	<div class="publication-entry journal">
+	    <div class="authors">Martin Bullinger, Warut Suksompong, and Alexandros A. Voudouris</div>
+	    <div class="title">Welfare Guarantees in Schelling Segregation</div>
+	    <div class="venue">
+	        <em>Journal of Artificial Intelligence Research</em>, 71, pages 143&ndash;174.
+	    </div>
+	    <p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('journal')" class="filter-btn journal-btn" style="opacity: 1;">Journal</button>
+	            [<a href="https://arxiv.org/abs/2012.02086">arXiv</a>] 
+	            [<a href="https://www.jair.org/index.php/jair/article/view/12771">link</a>]
+	        </span>
+	    </p>
+	</div>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Felix Brandt, Martin Bullinger, and Patrick Lederer</div>
+	    <div class="title">On the Indecisiveness of Kelly-Strategyproof Social Choice Functions</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 20th International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>, pages 251&ndash;259.
+	    </div>
+	    <p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+	            [<a href="https://arxiv.org/abs/2102.00499">arXiv</a>] 
+	            [<a href="http://www.ifaamas.org/Proceedings/aamas2021/pdfs/p251.pdf">link</a>]
+	        </span>
+	    </p>
+	</div>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Felix Brandt, Martin Bullinger, and Anaëlle Wilczynski</div>
+	    <div class="title">Reaching Individually Stable Coalition Structures in Hedonic Games</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 35th AAAI Conference on Artificial Intelligence (AAAI)</em>, pages 5211&ndash;5218.
+	    </div>
+	    <p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+	            [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/16658/16465">link</a>]
+	        </span>
+	    </p>
+	</div>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Martin Bullinger, Warut Suksompong, and A. Voudouris</div>
+	    <div class="title">Welfare Guarantees in Schelling Segregation</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 35th AAAI Conference on Artificial Intelligence (AAAI)</em>, pages 5236&ndash;5243.
+	    </div>
+	    <p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+	            [<a href="https://arxiv.org/abs/2012.02086">arXiv</a>] 
+	            [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/16661/16468">link</a>]
+	        </span>
+	    </p>
+	</div>
+	
+	<div class="publication-entry conference">
+	    <div class="authors">Martin Bullinger and Stefan Kober</div>
+	    <div class="title">Loyalty in Cardinal Hedonic Games</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 30th International Joint Conference on Artificial Intelligence (IJCAI)</em>, pages 66&ndash;72.
+	    </div>
+	    <p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+	            [<a href="https://www.ijcai.org/proceedings/2021/0010.pdf">link</a>]
+	        </span>
+	    </p>
+	</div>
+	
+    <!-- Publications 2020 -->
+	<p style="font-size: 20px; text-align: left; font-weight: bold;">2020</p>
+	<hr>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Felix Brandt and Martin Bullinger</div>
+	    <div class="title">Finding and Recognizing Popular Coalition Structures</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 19th International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>, pages 195&ndash;203.
+	    </div>
+	    <p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+	            [<a href="http://www.ifaamas.org/Proceedings/aamas2020/pdfs/p195.pdf">link</a>]
+	        </span>
+	    </p>
+	</div>
+
+	<div class="publication-entry conference">
+	    <div class="authors">Martin Bullinger</div>
+	    <div class="title">Pareto-Optimality in Cardinal Hedonic Games</div>
+	    <div class="venue">
+	        In <em>Proceedings of the 19th International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>, pages 213&ndash;221.
+	    </div>
+	    <p style="font-size: 16px">
+	        <span class="button-link-container">
+	            <button onclick="filterByTag('conference')" class="filter-btn conference-btn" style="opacity: 1;">Conference</button>
+	            [<a href="http://www.ifaamas.org/Proceedings/aamas2020/pdfs/p213.pdf">link</a>]
+	        </span>
+	    </p>
+	</div>
+	
+	
+	<script>
+	    // Function to filter publications based on the selected tag
+	    function filterByTag(tag) {
+	        const entries = document.querySelectorAll('.publication-entry');
+        
+	        // Loop through each entry and filter by the matching tag
+	        entries.forEach(entry => {
+	            // Always show preprints
+	            if (entry.classList.contains('preprint')) {
+	                entry.style.display = 'block';
+	            } else if (tag === 'all' || entry.classList.contains(tag)) {
+	                // Show entry if it matches the tag or if 'all' is selected
+	                entry.style.display = 'block';
+	            } else {
+	                // Hide the entry if it doesn't match the selected tag
+	                entry.style.display = 'none';
+	            }
+	        });
+
+	        // Toggle the active class for the buttons
+	        const buttons = document.querySelectorAll('.filter-buttons button');
+	        buttons.forEach(button => {
+	            button.classList.remove('active');
+	        });
+
+	        // Add 'active' class to the clicked button
+	        document.querySelector(`button[onclick="filterByTag('${tag}')"]`).classList.add('active');
+			
+			// Show/Hide the 'All' content based on the selected tag
+		    const allContent = document.querySelector('.all-content');
+		    if (tag === 'all') {
+		        allContent.style.display = 'block';
+		    } else {
+		        allContent.style.display = 'none';
+		    }
+	    }
+
+	    // Set default filter to 'all' when the page loads
+	    window.onload = function() {
+	        filterByTag('all');
+	    }
+	</script>
+	
+</body>

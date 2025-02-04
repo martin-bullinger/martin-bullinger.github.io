@@ -1,0 +1,81 @@
+ 
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: rgb(224, 222, 217);
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	width: 1000px;
+   	margin-left: auto;
+   	margin-right: auto;
+}
+
+#paperformat {
+	margin-left: 130px; 
+	margin-right: 130px; 
+}
+
+#paperformat paper {
+	color: #b3b3ff;
+}
+
+
+.column {
+     
+     width:600px;
+     float:center;
+     text-align: center;
+}
+
+#navcontainer ul
+{
+padding: .2em 0;
+margin: 0;
+list-style-type: none;
+<!--background-color: #036;-->
+color: #FFF;
+width: 100%;
+
+text-align: center;
+}
+
+#navlist a
+{
+ text-decoration: none;
+ color:#0056b3;
+<!--other version: color:#122f53;-->
+}
+
+#navlist a:hover { text-decoration: underline; color:#81BEF7; }
+
+#navlist li
+{
+font-size: 22px;
+font-weight: bold;
+text-align: center;
+display: inline;
+list-style-type: none;
+padding-right: 40px;
+Padding-left: 40px;
+
+}
+
+.head-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+a {
+	text-decoration: none; color: #0056b3; font-weight: bold;/* alternative gray I like: #a79d96 */
+}
+
+a:hover {
+	text-decoration: underline; color: #81BEF7; font-weight: bold;
+}
+
