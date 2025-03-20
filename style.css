@@ -72,10 +72,21 @@ Padding-left: 40px;
 }
 
 a {
-	text-decoration: none; color: #0056b3; font-weight: bold;/* alternative gray I like: #a79d96 */
+	text-decoration: none; 
+	color: #0056b3; 
+	font-weight: bold;/* alternative gray I like: #a79d96 */
 }
 
 a:hover {
-	text-decoration: underline; color: #81BEF7; font-weight: bold;
+	text-decoration: underline; 
+	color: #81BEF7; 
+	font-weight: bold;
 }
+
+.no-hover {
+	text-decoration: none; 
+	color: #0056b3; 
+	font-weight: bold;/* alternative gray I like: #a79d96 */
+    }
+
 
