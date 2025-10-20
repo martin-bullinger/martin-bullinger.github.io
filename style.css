@@ -89,4 +89,13 @@ a:hover {
 	font-weight: bold;/* alternative gray I like: #a79d96 */
     }
 
+.index-box {
+      width: 90%;
+	  margin: 50px auto;
+      box-sizing: border-box;
+      border-radius: 30px;
+      background-color: #ffffff;
+      padding: 40px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
 
